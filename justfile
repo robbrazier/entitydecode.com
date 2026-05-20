@@ -6,3 +6,6 @@ build:
 
 preview:
 	deno task preview
+
+deploy:
+	deno task deploy

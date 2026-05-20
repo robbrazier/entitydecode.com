@@ -1,3 +1,0 @@
-image: denoland/deno:latest
-command: deno install && deno run build
-public: dist

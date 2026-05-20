@@ -9,14 +9,15 @@ steps:
       - event: push
     commands:
       - deno install
-      - deno run build
+      - deno task build
   - name: deploy
-    image: ghcr.io/astral-sh/uv:python3.12-alpine
+    image: denoland/deno:latest
     when:
       - event: push
     environment:
-      BUNNY_API_KEY:
-        from_secret: BUNNY_API_KEY
+      CLOUDFLARE_ACCOUNT_ID:
+        from_secret: CLOUDFLARE_ACCOUNT_ID
+      CLOUDFLARE_API_TOKEN:
+        from_secret: CLOUDFLARE_WORKERS_API_TOKEN
     commands:
-      - uvx trifold publish --delete
-      - uvx trifold redirects
+      - deno task deploy

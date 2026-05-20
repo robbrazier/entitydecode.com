@@ -11,13 +11,13 @@ A fully client-side tool to encode and decode HTML Entities from text (e.g.
 Packages are installed with [bun](https://bun.sh)
 
 ```bash
-deno install
+bun install
 ```
 
 To run the app, use
 
 ```bash
-deno run dev
+bun dev
 ```
 
 ## Maintenance
