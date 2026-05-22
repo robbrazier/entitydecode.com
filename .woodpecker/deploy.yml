@@ -20,4 +20,4 @@ steps:
       CLOUDFLARE_API_TOKEN:
         from_secret: CLOUDFLARE_WORKERS_API_TOKEN
     commands:
-      - deno task deploy
+      - deno task deploy --message "$CI_COMMIT_MESSAGE"
