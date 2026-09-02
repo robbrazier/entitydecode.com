@@ -18,5 +18,5 @@ steps:
       BUNNYNET_API_KEY:
         from_secret: BUNNYNET_API_KEY
     commands:
-      - curl -fsSL https://cli.bunny.net/install.sh | sh
+      - wget -qO- https://cli.bunny.net/install.sh | sh
       - bunny sites deploy dist
