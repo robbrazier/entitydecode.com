@@ -11,15 +11,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
-      - uses: actions/setup-node@v7
-        with:
-          node-version: lts/*
-          cache: npm
+      - uses: oven-sh/setup-bun@v2
 
       - name: install dependencies
-        run: npm ci
+        run: bun install --frozen-lockfile
 
       - name: deploy
-        run: npm run deploy
+        run: bun run deploy
         env:
           BUNNYNET_API_KEY: ${{ secrets.BUNNYNET_API_KEY }}

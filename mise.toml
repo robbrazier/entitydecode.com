@@ -1,11 +1,7 @@
 [tools]
-"github:bunnyway/cli" = "latest"
+bun = "latest"
 just = "latest"
 lefthook = "latest"
-node = "lts"
-
-# [env]
-# _.path = "node_modules/.bin"
 
 [hooks]
-postinstall = "npm install && lefthook install"
+postinstall = "bun install && lefthook install"

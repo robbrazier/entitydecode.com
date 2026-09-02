@@ -1,8 +1,8 @@
 dev:
-	npm run dev
+	bun run dev
 
 build:
-	npm run build
+	bun run build
 
 deploy:
-	npm run deploy
+	bun run deploy

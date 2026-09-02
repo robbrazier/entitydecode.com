@@ -6,7 +6,7 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
-    "deploy": "bunny sites deploy dist --build 'npm run build'"
+    "deploy": "bunny sites deploy dist --build 'bun run build'"
   },
   "dependencies": {
     "@astrojs/solid-js": "^6.0.1",
