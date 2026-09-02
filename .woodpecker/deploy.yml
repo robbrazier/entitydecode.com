@@ -9,18 +9,14 @@ steps:
     image: codeberg.org/woodpecker-plugins/node-pm
     settings:
       run: build
-      with: pnpm
       frozen_lockfile: true
-      ignore_node_modules: true 
   - name: deploy
     when:
       - event: push
     image: codeberg.org/woodpecker-plugins/node-pm
     settings:
       run: deploy
-      with: pnpm
       frozen_lockfile: true
-      ignore_node_modules: true 
     environment:
       BUNNYNET_API_KEY:
         from_secret: BUNNYNET_API_KEY
