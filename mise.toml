@@ -2,10 +2,9 @@
 just = "latest"
 lefthook = "latest"
 node = "lts"
-pnpm = "latest"
 
 [env]
 _.path = "node_modules/.bin"
 
 [hooks]
-postinstall = "pnpm install && lefthook install"
+postinstall = "npm install && lefthook install"

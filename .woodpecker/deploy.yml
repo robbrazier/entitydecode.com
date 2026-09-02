@@ -4,12 +4,12 @@ when:
 
 steps:
   - name: build
-    image: ghcr.io/pnpm/pnpm:11
+    image: node:lts-alpine
     when:
       - event: push
     commands:
-      - pnpm install
-      - pnpm run build
+      - npm ci
+      - npm run build
   - name: deploy
     image: node:lts-alpine
     when:
