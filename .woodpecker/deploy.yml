@@ -19,4 +19,4 @@ steps:
         from_secret: BUNNYNET_API_KEY
     commands:
       - wget -qO- https://cli.bunny.net/install.sh | sh
-      - bunny sites deploy dist
+      - /root/.bunny/bin/bunny sites deploy dist
