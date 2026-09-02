@@ -1,11 +1,8 @@
 dev:
-	deno task dev
+	npm run dev
 
 build:
-	deno task build
-
-preview:
-	deno task preview
+	npm run build
 
 deploy:
-	deno task deploy
+	npm run deploy
