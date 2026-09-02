@@ -3,13 +3,13 @@ when:
     event: push
 
 steps:
-  # - name: build
-  #   image: node:lts-alpine
-  #   when:
-  #     - event: push
-  #   commands:
-  #     - npm ci
-  #     - npm run build
+  - name: build
+    image: node:lts-alpine
+    when:
+      - event: push
+    commands:
+      - npm ci
+      - npm run build
   - name: deploy
     image: node:lts-alpine
     when:
@@ -18,5 +18,4 @@ steps:
       BUNNYNET_API_KEY:
         from_secret: BUNNYNET_API_KEY
     commands:
-      - npm ci
-      - npm run deploy
+      - npx -y @bunny.net/cli sites deploy dist
